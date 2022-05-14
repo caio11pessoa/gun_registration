@@ -41,3 +41,13 @@ class Objeto_tipoList(generics.ListCreateAPIView):
 class Objeto_tipoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Objeto_tipo.objects.all()
     serializer_class = serializers.Objeto_tipo_serializer
+
+
+class ObjetoList(generics.ListCreateAPIView):
+    queryset = models.Objeto.objects.all()
+    serializer_class = serializers.Objeto_serializer
+
+
+class ObjetoDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Objeto.objects.all()
+    serializer_class = serializers.Objeto_serializer

@@ -12,8 +12,12 @@ urlpatterns = format_suffix_patterns([
     path('municoes/', views.MunicaoList.as_view(), name='Municao-list'),
     path('municoes/<int:pk>', views.MunicaoDetail.as_view(),
          name='Municao-detail'),
-    path('objeto_tipos/<int:pk>', views.Objeto_tipoList.as_view(),
+    path('objeto_tipos/', views.Objeto_tipoList.as_view(),
          name='objeto_tipo-list'),
     path('objeto_tipos/<int:pk>', views.Objeto_tipoDetail.as_view(),
          name='objeto_tipo-detail'),
+    path('objetos/', views.ObjetoList.as_view(),
+         name='objeto-list'),
+    path('objetos/<int:pk>', views.ObjetoDetail.as_view(),
+         name='objeto-detail'),
 ])

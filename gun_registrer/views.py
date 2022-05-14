@@ -3,21 +3,41 @@ from rest_framework import generics
 from gun_registrer import models, serializers
 
 
-class Calibre(generics.ListAPIView):
-    serializer_class = serializers.Calibre_serializer
+class CalibreList(generics.ListCreateAPIView):
     queryset = models.Calibre.objects.all()
-
-
-class Arma(generics.ListAPIView):
     serializer_class = serializers.Calibre_serializer
+
+
+class CalibreDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Calibre.objects.all()
-
-
-class Municao(generics.ListAPIView):
     serializer_class = serializers.Calibre_serializer
-    queryset = models.Calibre.objects.all()
 
 
-class Objeto_tipo(generics.ListAPIView):
-    serializer_class = serializers.Calibre_serializer
-    queryset = models.Calibre.objects.all()
+class ArmaList(generics.ListCreateAPIView):
+    queryset = models.Arma.objects.all()
+    serializer_class = serializers.Arma_serializer
+
+
+class ArmaDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Arma.objects.all()
+    serializer_class = serializers.Arma_serializer
+
+
+class MunicaoList(generics.ListCreateAPIView):
+    queryset = models.Municao.objects.all()
+    serializer_class = serializers.Municao_serializer
+
+
+class MunicaoDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Municao.objects.all()
+    serializer_class = serializers.Municao_serializer
+
+
+class Objeto_tipoList(generics.ListCreateAPIView):
+    queryset = models.Objeto_tipo.objects.all()
+    serializer_class = serializers.Objeto_tipo_serializer
+
+
+class Objeto_tipoDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Objeto_tipo.objects.all()
+    serializer_class = serializers.Objeto_tipo_serializer

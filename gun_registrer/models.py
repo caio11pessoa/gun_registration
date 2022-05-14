@@ -11,6 +11,8 @@ class Arma(models.Model):
     quantidade_de_tiros = models.IntegerField()
     valor_estimado = models.FloatField()
     imagem = models.CharField(max_length=128)
+    calibre = models.ForeignKey(
+        Calibre, related_name='armas', on_delete=models.CASCADE)
 
 
 class Municao(models.Model):
@@ -19,5 +21,5 @@ class Municao(models.Model):
     valor_estimado = models.FloatField()
 
 
-class Objeto_tipo:
+class Objeto_tipo(models.Model):
     tipo_de_objeto = models.CharField(max_length=64)

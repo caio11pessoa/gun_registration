@@ -19,5 +19,5 @@ class Municao(models.Model):
     valor_estimado = models.FloatField()
 
 
-class objeto_tipo:
+class Objeto_tipo:
     tipo_de_objeto = models.CharField(max_length=64)
